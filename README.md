@@ -3,26 +3,34 @@
 To setup the project: 
 (Note - the Ruby version is set to 2.7, so you may need to update your ruby version to run this project. See RVM or RBENV documentation to do this.)
 
-- Clone the repository, and push up your own version to your github repositories. 
-- Invite @carmer to your repository for PR review: 
+- Clone the repository, and push up your own cloned version to your github profile/repositories.
+- Invite @carmer to your repository for PR review by adding/inviting to the project/repository, or tagging in the PR with `@carmer`.
 - `bundle install`
 - `rails db:create`
 - `rails db:migrate`
 - `rails db:seed` 
+- `rails assets:precompile`
 - `rails s`
 - Navigate to `localhost:3000/graphiql` to confirm 
+- On `localhost:3000/graphiql` you can execute the following query by pasting it into the query editor and hitting the play buttom on the top nav: 
+```graphql
+query isItWorking{
+  helloWorld
+}
+```
 
 ### The Challenge:
 
 Add new a new feature to the rails project.
 
 #### The expectations:
-- 5-8hrs of time estimated. You will have 2 days to deliver your PRs.
+- 5-8hrs of estimated working time - You will have 2 days to deliver your PRs.
 - Submit 1 PR per story submitted for review. 5 Total stories below.
-- You don't need to finish all 5 stories. Submit AT LEAST 1 story for review. We would like to see as many as you can complete, but we don't want to prescribe a set amount to finish. We're not sure the level of familiarity you have with graphQL so we know there will be learning for these tasks. As is the nature with learning - it will take a variable amount of time for everyone. To us it's not just about how much you get done. That means we'll be looking at your commits, and the description/context of your work provided in your PRs for a full assessment.
+- PRs should include some information in the message. For example you should include something like the purpose of the PR, changes made, any necessary context, notes etc
+- Submit AT LEAST 1 story for review. You don't need to finish all 5 stories. We would like to see as many as you can complete, but we don't want to prescribe a set amount to finish. We know it's unlikely you know graphQL and we know there will be learning for these tasks but we think graphQL docs are good and well documented, so we want to see what you can accomplish with good docs and a few days. To us it's not just about how much you get done but if you learned the thing and you're making progress. That means we'll be looking at your commits, and the description/context of your work provided in your PRs for a full assessment.
 - #6 is extra credit
 
-#### The scenario:
+#### The Project:
 
 We have a rails, postgres DB, RSpec project with an existing data model of:
 
@@ -31,11 +39,13 @@ We have a rails, postgres DB, RSpec project with an existing data model of:
 - JobApplication
 
 Relations: 
-- Candidates can have many jobApplications
-- JobPostings can have many jobApplications
-- JobApplications belong to Candidates and JobPostings
+- `Candidate`s can have many `JobApplication`s
+- `JobPosting`s can have many `JobApplication`s
+- `JobApplication`s belong to `Candidate`s and `JobPosting`s
 
-Our team has been tasked to add an api with GraphQL. These are the first graphQL stories for this project. Another team has setup GraphQL in the project, but it's your task to start building the api "endpoints" aka `queries` and `mutations` in graphql verbage. 
+#### The Scenario:
+
+Our team has been tasked this "sprint" with adding starting an api with GraphQL. These are the first stories to implement GraphQL for this project so you'll be working from a blank slate. Another team has setup GraphQL in the project, but it's your task to start building the api "endpoints" aka `queries` and `mutations` in graphql verbage. 
 
 Since graphql is new to this project it's new to the whole team meaning there aren't defined resources yet. That means part of the engineering process for these stories is learning and discovery! Share your knowledge! Including learning and discoveries made in your PRs and any documentation you write is a big plus+ and welcomed by your team. Share any questions you have or things you couldn't quite solve in any PRs too. For a remote team, PRs are a place to provide your team all your context for what you were working on, and to talk it all out. 
 
@@ -45,7 +55,7 @@ The team that added graphql to the project left you this note from their PR:
 Added graphQL library and graphiQL GUI for executing queries and mutations.
 
 - Start here: https://graphql.org/ . Learn about basic queries and mutations
-- You can find the ruby graphql library docs and info here: 
+- You can find the ruby specific graphql library docs and info here: 
     - https://github.com/rmosolgo/graphql-ruby
     - https://graphql-ruby.org/development
 ```
