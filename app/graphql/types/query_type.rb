@@ -15,8 +15,17 @@ module Types
       argument :id, ID, required: true
     end
 
+    field :jobApplications, JobApplicationType, null: true do
+      description "Find a single job application by its' id"
+      argument :id, ID, required: true
+    end
+
     def candidate(id)
       Candidate.find(id[:id])
+    end
+
+    def jobApplications(id)
+      JobApplication.find(id[:id])
     end
 
     def hello_world
