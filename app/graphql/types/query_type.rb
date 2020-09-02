@@ -5,7 +5,7 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    field :candidates,
+    field :allCandidates,
           [Types::CandidateType],
           null: false,
           description: "Returns a list of all candidates"
@@ -15,7 +15,7 @@ module Types
           null: false, # If it can ever return a null value
           description: 'An example field added for your reference!' # Optional Descriotion
 
-    def candidates
+    def allCandidates
       Candidate.all
     end
 
