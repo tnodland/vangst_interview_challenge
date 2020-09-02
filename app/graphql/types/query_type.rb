@@ -15,8 +15,13 @@ module Types
           null: false, # If it can ever return a null value
           description: 'An example field added for your reference!' # Optional Descriotion
 
-    def getCandidate
-      Candidate.get()
+    field :candidate, CandidateType, null: true do
+      description 'test'
+      argument :id, ID, required: true
+    end
+
+    def candidate(id)
+      Candidate.find(id[:id])
     end
 
     def hello_world
