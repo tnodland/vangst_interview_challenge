@@ -17,6 +17,13 @@ module Types
 
     def candidate(id)
       Candidate.find(id[:id])
+      # binding.pry
+
+      # jobApplications = Candidate.find(id[:id]).job_applications
+    end
+
+    def jobApplication(id)
+      JobApplication.find(id[:id])
     end
 
     def hello_world
