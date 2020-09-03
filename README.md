@@ -121,6 +121,6 @@ Expected Response:
 # Future Additions:
 
 - Finish User stories 4 and 5, expanded on in pull request #14, Get Active Jobs
-- Test enpoints, as this was time limited I did not dive too deeply into testing, but I did do some reasearch and found [this](https://graphql-ruby.org/testing/integration_tests.html) guide that would likely help me get started
+- Test endpoints, as this was time limited I did not dive too deeply into testing, but I did do some reasearch and found [this](https://graphql-ruby.org/testing/integration_tests.html) guide that would likely help me get started
 
 
