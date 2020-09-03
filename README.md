@@ -1,5 +1,5 @@
 # Vangst Internship Interview Challenge 
-This is an Interview challenege I recieved, the original can be found [here](https://github.com/Carmer/interview_challenge)
+This is an Interview challenge I recieved, the original can be found [here](https://github.com/Carmer/interview_challenge)
 
 # Setup the Project: 
 (Note - the Ruby version is set to 2.7, so you may need to update your ruby version to run this project. See RVM or RBENV documentation to do this.)
