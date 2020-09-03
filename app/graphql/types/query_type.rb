@@ -11,12 +11,21 @@ module Types
           description: 'An example field added for your reference!' # Optional Descriotion
 
     field :candidate, CandidateType, null: true do
-      description 'test'
+      description 'Gets a single candidate'
       argument :id, ID, required: true
+    end
+
+    field :job_applications, JobApplicationType, null: true do
+      description 'Gets active job applications'
+      argument :isActive, Boolean, required: true
     end
 
     def candidate(id)
       Candidate.find(id[:id])
+    end
+
+    def job_applications(isActive)
+      JobApplication.where(is_active: isActive)
     end
 
     def hello_world
