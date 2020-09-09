@@ -9,7 +9,7 @@ module Types
           [Types::CandidateType],
           null: false,
           description: "Returns a list of all candidates"
-
+    
     field :hello_world, # name of method
           String, # Type the data will be
           null: false, # If it can ever return a null value
